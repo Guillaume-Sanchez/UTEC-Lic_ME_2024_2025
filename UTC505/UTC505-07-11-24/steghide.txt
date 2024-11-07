@@ -1,0 +1,7 @@
+  $ steghide embed -cf picture.jpg -ef secret.txt
+  
+  $ steghide info picture.jpg 
+
+  $ steghide extract -sf picture.jpg
+
+  
