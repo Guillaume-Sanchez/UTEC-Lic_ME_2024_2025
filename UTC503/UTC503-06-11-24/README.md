@@ -2,7 +2,9 @@
 
 ## Exemple Explicatifs
 
-Propriétés = Variable 
+Variable -> Traitement -> Résultat/Sortis
+
+Propriétés = Variable
 Comportements = Méthode
 
 ### Explication de l'héritage :
