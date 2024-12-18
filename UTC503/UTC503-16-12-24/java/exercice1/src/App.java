@@ -10,10 +10,8 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.println("Entrez le chiffre que vous voulez :");
         int num = sc.nextInt();
-
-        for(int i = 0; i <= 10; i++ ){
+        for(int i = 1; i <= 10; i++ ){
             System.out.println(num + " x " + i + " = " + num*i);
         }
-
     }
 }
