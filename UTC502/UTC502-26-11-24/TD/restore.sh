@@ -5,14 +5,14 @@
 USER_DEST="user"
 
 #Serveur destinataire de la sauvegarde :
-#ADRESS_DEST="10.9.134.117"
-ADRESS_DEST="192.168.1.181"
+ADRESS_DEST="10.9.134.117" # Adresse serveur distant
+#ADRESS_DEST="192.168.1.181" # Adresse local de test
 
 #Dossier du serveur destinataire de la sauvegarde
 BACKUP_DIR_DEST="/home/user/rep_dest/"
 
-#Dossier local de la receprtion de la sauvegarder
-BACKUP_DIR="/tmp/saveSCP/"
+#Dossier local de la receprtion de la sauvegarder, à créer si il n'existe pas, a modifier selon l'utilisateur
+BACKUP_DIR="/home/nk/saveSCP/"
 
 SEPARATOR="--------------------"
 

@@ -30,10 +30,10 @@ int main()
         write(fd, &un_eleve, sizeof(eleve));
         i = i + 1;
     }
-    ret = lseek(fd, 0, SEEK_SET);
+    ret = lseek(fd, SEEK_SET, 0);
     if (ret == -1)
         perror("prob lseek");
-    printf("la nouvelle position est %d\n", ret);
+        printf("la nouvelle position est %d\n", ret);
     i = 0;
     while (i < 4)
     {
@@ -45,4 +45,5 @@ int main()
     }
     close(fd);
     return 0;
+
 }

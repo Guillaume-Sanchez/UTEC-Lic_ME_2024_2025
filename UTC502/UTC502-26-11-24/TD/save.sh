@@ -1,18 +1,18 @@
 #!/bin/bash
 #Script de sauvegarde
  
-#Dossier à sauvegarder
-DATA_TO_BACKUP="/home/nk/test"
+#Dossier à sauvegarder, a modifier selon l'utilisateur
+DATA_TO_BACKUP="/home/nk/rep_src/"
 
-#Dossier local de la création de la sauvegarder
-BACKUP_DIR="/tmp/sauvegarde/"
+#Dossier local de la création de la sauvegarder, a modifier selon l'utilisateur
+BACKUP_DIR="/home/nk/sauvegarde/"
 
 #Utilisateur du serveur destinataire de la sauvegarde :
 USER_DEST="user"
 
 #Serveur destinataire de la sauvegarde :
-#ADRESS_DEST="10.9.134.117"
-ADRESS_DEST="192.168.1.181"
+ADRESS_DEST="10.9.134.117" # Adresse serveur distant
+#ADRESS_DEST="192.168.1.181" # Adresse local de test
 
 #Dossier du serveur destinataire de la sauvegarde
 BACKUP_DIR_DEST="/home/user/rep_dest/"
