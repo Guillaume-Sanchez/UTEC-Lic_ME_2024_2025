@@ -12,7 +12,7 @@ ADRESS_DEST="10.9.134.117" # Adresse serveur distant
 BACKUP_DIR_DEST="/home/user/rep_dest/"
 
 #Dossier local de la receprtion de la sauvegarder, à créer si il n'existe pas, a modifier selon l'utilisateur
-BACKUP_DIR="/home/nk/saveSCP/"
+BACKUP_DIR="/home/nk/sauvegarde/"
 
 SEPARATOR="--------------------"
 
