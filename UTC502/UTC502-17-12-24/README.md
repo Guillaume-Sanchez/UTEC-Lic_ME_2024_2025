@@ -2,7 +2,7 @@
 
 ## Oronnancement sur l'unité centrale
 
-### A. Prolitique Premier Arrivé, Premier servi
+### A. Prolitique Premier Arrivé, Premier servi (First In, First Out)
 
 - Les processus sont élus selon l’ordre dans lequel ils 
 arrivent dans la file d’attente des processus prêts. 
