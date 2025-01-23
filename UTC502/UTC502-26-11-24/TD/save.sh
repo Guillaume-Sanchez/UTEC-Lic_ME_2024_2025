@@ -11,8 +11,7 @@ BACKUP_DIR="/home/nk/sauvegarde/"
 USER_DEST="user"
 
 #Serveur destinataire de la sauvegarde :
-ADRESS_DEST="10.9.134.117" # Adresse serveur distant
-#ADRESS_DEST="192.168.1.181" # Adresse local de test
+ADDRESS_DEST="172.20.10.5" #adresse serveur distant
 
 #Dossier du serveur destinataire de la sauvegarde
 BACKUP_DIR_DEST="/home/user/rep_dest/"
@@ -20,7 +19,7 @@ BACKUP_DIR_DEST="/home/user/rep_dest/"
 SEPARATOR="--------------------"
 
 #Définition de la date du jour afin de pouvoir récupérer (a adapter)
-#l'année ($3), le mois ($1) et le jour ($3) pour nommer le fichier de sauvegarde
+#l'année ($3), le mois ($1) et le jour ($2) pour nommer le fichier de sauvegarde
 IFS=/
 set $(date +%D)
 annee=$3
