@@ -15,7 +15,7 @@ int main()
 {
 int fd, i, ret;
 eleve un_eleve;
-fd = open ("./eleve.txt", O_CREAT | O_TRUNC | O_RDWR , S_IRUSR | S_IRGRP | S_IWOTH);
+fd = open ("./eleve.txt", O_RDWR);
 if (fd == -1)
 perror ("prob open");
 i = 0;
