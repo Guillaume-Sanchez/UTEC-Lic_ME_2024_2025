@@ -5,8 +5,6 @@
 Un indentifiant unique.
 un sous-ensembles spécialisation, sans indentifiant.
 
-
-
 ## Cours_2_Partie2_SI_Gen_Speci-Exemples.pdf
 
 ### Exemple 1 :
