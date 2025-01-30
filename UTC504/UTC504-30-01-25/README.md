@@ -11,3 +11,10 @@ Backend -> Traitement -> Langage fonctionnel
  BDD
 ```
 
+## SQL 
+
+3 tables :
+
+Eleves : (NomElv, AdrElv, VilleElv),
+Matières : (NomMat, Coef, Intitule),
+Notes : (NomElv, NomMat, Date, Note).
