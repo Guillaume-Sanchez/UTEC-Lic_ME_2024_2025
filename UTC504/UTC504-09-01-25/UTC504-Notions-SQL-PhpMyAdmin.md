@@ -6,15 +6,7 @@ Plusieurs possibilités s'offrent à nous. Tout d'abord à la main, en écrivant
 
 Exemple (MySQL/MariaDB) :
 ```
-CREATE TABLE `platforms` (
-`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-`name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-`manufacturer` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-`status` tinyint(3) unsigned NOT NULL DEFAULT 0,
-`created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-`updated_at` timestamp NULL DEFAULT NULL,
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE DATABASE 'data_base_name';
 ```
 Une seconde solution est d'utiliser un outil de gestion de base de données comme phpMyadmin, Adminer, sqldeveloper.
 
@@ -31,6 +23,8 @@ En plus de pouvoir créer et gérer la structure d'une base de donnée d'un proj
 
 **MySQL** est un système de gestion de bases de données relationnelles SQL open source développé et supporté par Oracle.MySQL n’est qu’un système populaire qui peut stocker et gérer ces données pour vous, et c’est une solution de base de données particulièrement populaire pour les sites WordPress
 
+**MariaDB** est un système de gestion de base de données relationnelles. Après le rachat de MySQL par Sun Microsystems, puis de Sun par Oracle Corporation, son fondateur (Michael Widenius) démissionne pour lancer une version alternative, sous licence GPL et 100% compatible avec MySQL. Il s'agit donc d'un fork plus communautaire et ouvert, et 100% compatible MySQL.
+
 **phpMyAdmin** (PMA) est une application Web de gestion pour les systèmes de gestion de base de données MySQL et MariaDB, réalisée principalement en PHP et distribuée sous licence GNU GPL. Il s'agit de l'une des plus célèbres interfaces pour gérer une base de données MySQL sur un serveur PHP.
 
 ## Installation de PhpMyAdmin
@@ -41,13 +35,14 @@ Voici les commandes sous linux (debian) afin d'installer un serveur web de A à 
 
 ### Apache
 ```
-apt install apache2
+sudo apt install apache2
 ```
 ### Php
 ```
-apt install php php-common php-cli php-mysql libapache2-mod-php php-mbstring php-json php-xml
+sudo apt install php php-common php-cli 
+php-mysql libapache2-mod-php php-mbstring php-json php-xml
 ```
-### MySQL
+### MariaDB (ou MySQL)
 ```
 sudo apt install mariadb-server
 ```
