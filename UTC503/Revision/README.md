@@ -84,3 +84,150 @@ Un objet est une instance de classe, c'est-à-dire un exemplaire utilisable cré
 Le concept de classe est abstrait  alors que le concept d'objet est 
 fondamentalement concret: il est concevable de croiser des personnes 
 physiques, c'est-à-dire des instances d'Humain.
+
+## Java
+
+### Les variables :
+
+***differents types de variables utile***
+
+```
+int nomDeLaVariable = 3
+double nomDeLaVariable = 3.5
+char nomDeLaVariable = 't'
+String nomDeLaVariable = "Hello World"
+```
+
+### Les conditions :
+
+>Les exemple suivant suivant sont réaliser avec la condition suivante : si sexe = F alors "Il s'agit d'une femme", Sinon Si sexe = H alors "Il s'agit d'un homme" Sinon 
+
+#### if / else / else if
+
+```
+if(sexe == 'F'){ // Si
+    System.out.println("Il s'agit d'une femme");
+}
+else if(sexe == 'H'){ // Sinon si
+    System.out.println("Il s'agit d'un homme");
+}
+else{ //Sinon
+    System.out.println("Sexe indéterminé");
+}
+```
+
+#### switch CASE
+
+```
+switch (sexe) {
+    case 'F':
+        System.out.println("Il s'agit d'une femme");
+        break;
+    case 'H':
+        System.out.println("Il s'agit d'un homme");
+        break;            
+    default:
+        System.out.println("Sexe indéterminé");
+        break;
+}
+```
+
+### Les Boucles : 
+
+>La Boucle à utilisé dépend de la situation et de la demande
+
+#### for
+
+***Pour*** i égale 1, ***tant que*** i est inferieur ou égale à 10, on ajoute 1
+
+```
+for(int i = 1; i <= 10; i++){
+    System.out.println(i);
+}
+```
+
+#### while
+
+***Tant que*** i est inferieur ou égale à 10, on affiche i et on ajoute 1 à i
+
+```
+int i = 1;
+
+while (i <= 10) {
+    System.out.println(i);
+    i++
+}
+```
+
+#### Do while
+
+***Faire*** on affiche i et on ajoute 1 à i ***tant que*** i est inferieur ou égale à 10
+
+**Cette méthode permet d'executer le code au moins une fois.**
+
+```
+int i = 1;
+
+do{
+    System.out.println(i);
+    i++
+} while (i <= 10);
+```
+
+### Les Class : 
+
+Utilisation d'une class :
+```
+Ville ville = new Ville();
+Class (Ville) objet (ville) operateur (new) consturcteur (Ville())
+```
+
+### Class (exemple Ville) :
+
+```
+public class Ville {
+    
+    private String nomVille;
+    private String nomPays;
+    private int nbreHabitants;
+    
+    public Ville(){
+        System.out.println("Création d'une ville");
+        nomVille= "toto";
+        nomPays = "tata";
+        nbreHabitants= 0;
+    }
+
+    public Ville(String pNom, int pNbre, String pPays){
+        System.out.println("Création d'une ville");
+        nomVille= pNom;
+        nomPays = pPays;
+        nbreHabitants= pNbre;
+    }
+
+    public int getNbreHabitants() {
+        return nbreHabitants;
+    }
+
+    public String getNomPays() {
+        return nomPays;
+    }
+
+    public String getNomVille() {
+        return nomVille;
+    }
+
+    public void setNbreHabitants(int nbreHabitants) {
+        this.nbreHabitants = nbreHabitants;
+    }
+    
+    public void setNomPays(String nomPays) {
+        this.nomPays = nomPays;
+    }
+
+    public void setNomVille(String nomVille) {
+        this.nomVille = nomVille;
+    }
+
+}
+```
