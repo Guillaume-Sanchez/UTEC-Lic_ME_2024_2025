@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exercice3 {
+public class App {
     public static void main(String[] args) throws Exception {
 
         // Utilisation de la bibliothèque Scanner pour lire les entrées de l'utilisateur
