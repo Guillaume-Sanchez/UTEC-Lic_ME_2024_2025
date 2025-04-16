@@ -2,7 +2,7 @@
 
 import winreg
 
-def get_userassist_raw_data():
+def get_userassist_data(filename):
     output = []
     try:
         userassist_base = r"Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist"
@@ -17,16 +17,14 @@ def get_userassist_raw_data():
                             value_name, value_data, _ = winreg.EnumValue(count_key, j)
                             output.append(f"{value_name} = {value_data}")
                         output.append("")  # Ligne vide pour séparer les blocs
+                        with open(filename, 'w', encoding='utf-8') as f:
+                            for line in output:
+                                f.write(line + "\n")
                 except FileNotFoundError:
                     continue
     except Exception as e:
         output.append(f"Erreur : {str(e)}")
     return output
-
-def save_to_file(filename, data):
-    with open(filename, 'w', encoding='utf-8') as f:
-        for line in data:
-            f.write(line + "\n")
 
 def convert_file_lines_to_rot13(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', encoding='utf-8') as outfile:
@@ -55,10 +53,10 @@ def rot13_conversion(message):
 
 if __name__ == "__main__":
     # Étape 1 : Extraction des données brutes
-    data = get_userassist_raw_data()
-    save_to_file("userassist.txt", data)
+    data = get_userassist_data("userassist.txt")
+    # save_to_file("userassist.txt", data)
     print(f"Fichier 'userassist.txt' généré avec succès.")
 
     # Étape 2 : Conversion partielle ROT13 sur noms des clés
-    convert_file_lines_to_rot13("userassist.txt", "ecode_userassist.txt")
-    print(f"Fichier 'ecode_userassist.txt' généré avec les clés encodées en ROT13.")
+    convert_file_lines_to_rot13("userassist.txt", "decode_userassist")
+    print(f"Fichier 'decode_userassist' généré avec succès.")
