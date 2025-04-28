@@ -22,4 +22,5 @@ chage -M 90 -W 14 -I 7 invite
 echo "modification du mot de passe de l'utilisateur intrus"
 echo -e "1234\n1234" | passwd intrus
 echo "afficher les 2 dernière lignes du fichier shadow"
-root@ubuntu-RSX112:~# tail -n 2 /etc/shadow
+tail -n 2 /etc/shadow
+

@@ -1,7 +1,24 @@
 #!/bin/bash
 
+
+
+
+
+
+
+
 tab_group=("technique" "formation" "commercial" "administratif")
 tab_user=("philippe" "harouna" "emmanuelle" "nicolas" "laurent" "franck" "patrick" "ali" "eric")
+
+
+
+
+
+
+
+
+
+
 
 function nettoyage {
     for user in "${tab_user[@]}"
