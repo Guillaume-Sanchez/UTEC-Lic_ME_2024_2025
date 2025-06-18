@@ -171,7 +171,7 @@ Temps : 90 min
 
 `« En tant que, j'aimerai, afin de »`
 
-![userstories](./userstories.png)
+![userstories](./userstories.PNG)
 
 | En tant que  | je voudrais | afin de |
 |:--|:--|:--|
