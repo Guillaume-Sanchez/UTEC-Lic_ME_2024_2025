@@ -1,5 +1,0 @@
-
-Calculer la pérdiode avant P = 1/F
-
-Priorité + temaps d'extenction executé / 2 * pérdiode
-
