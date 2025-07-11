@@ -40,3 +40,14 @@ Ebios : etape :
 / risques : evaluatiobn des risques ( matrice des risques FDP ) 
 
  / mesures : chose mise en place  
+
+Taux d'incidents de sécurité détectés et traités
+Formule : (Incidents détectés et traités / Incidents totaux) × 100
+
+Permet de mesurer la capacité de détection et de réaction du dispositif (SOC, SIEM, EDR…).
+
+2. ⏱️ Temps moyen de réaction aux incidents (MTTR – Mean Time To Respond)
+Mesure le temps écoulé entre la détection d’un incident et sa résolution complète.
+
+Plus il est bas, plus le dispositif est efficace et réactif.
+

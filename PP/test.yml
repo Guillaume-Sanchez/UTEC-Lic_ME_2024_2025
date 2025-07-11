@@ -1,0 +1,86 @@
+services:
+  app:
+    image: nextcloud
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - nextclouddb
+    volumes:
+      - ./applications/nextcloud:/var/www/html
+      - /mnt/data:/var/www/html/data
+    environment:
+      - MYSQL_PASSWORD=vkurnucfwirs?xxzsyf?hrhf?pllqzo?
+      - MYSQL_DATABASE=Nextcloud
+      - MYSQL_USER=nextcloud_user
+      - MYSQL_HOST=nextclouddb
+
+  nextclouddb:
+    image: app
+    container_name: nextcloud-db
+    restart: unless-stopped
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    volumes:
+      - ./nextclouddb:/var/lib/mysql
+    environment:
+      - TZ=Europe/Paris
+      - MYSQL_RANDOM_ROOT_PASSWORD=true
+      - MYSQL_PASSWORD=vkurnucfwirs?xxzsyf?hrhf?pllqzo?
+      - MYSQL_DATABASE=Nextcloud
+      - MYSQL_USER=nextcloud_user
+
+
+volumes:
+  nextcloud:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+services:
+  db:
+    image: mariadb:lts
+    restart: always
+    command: --transaction-isolation=READ-COMMITTED
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=vkurnucfwirs?xxzsyf?hrhf?pllqzo?
+      - MYSQL_PASSWORD=vkurnucfwirs?xxzsyf?hrhf?pllqzo?
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+
+  redis:
+    image: redis:alpine
+    restart: always
+
+  app:
+    image: nextcloud
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - redis
+      - db
+    volumes:
+      - ./applications/nextcloud:/var/www/html
+      - /mnt/data:/var/www/html/data
+    environment:
+      - MYSQL_PASSWORD=vkurnucfwirs?xxzsyf?hrhf?pllqzo?
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_HOST=db
+
+volumes:
+  nextcloud:
+  db:
